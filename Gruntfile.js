@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ['img/sprite_svg/*.svg']
+          src: ['img/svg/*.svg']
         }]
       }
     },
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       },
       default : {
         files: {
-          'img/sprite.svg': ['img/sprite_svg/*.svg'],
+          'img/sprite.svg': ['img/svg/*.svg']
         },
       },
     },
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
       },
       images: {
         files: [
-          'img/sprite_svg/*.svg'
+          'img/svg/*.svg'
         ],
         tasks: ['img'],
         options: {

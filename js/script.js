@@ -16,6 +16,7 @@
         insertIT = function()
         {
             document.body.insertAdjacentHTML( 'afterbegin', data );
+           // alert(document.body.innerHTML);
         },
         insert = function()
         {
@@ -28,6 +29,8 @@
         data = localStorage.getItem( 'inlineSVGdata' );
         if( data )
         {
+
+            //alert('get');
             insert();
             return true;
         }
@@ -45,6 +48,7 @@
                 insert();
                 if( isLocalStorage )
                 {
+                    //alert('set');
                     localStorage.setItem( 'inlineSVGdata',  data );
                     localStorage.setItem( 'inlineSVGrev',   revision );
                 }
