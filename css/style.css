@@ -1,0 +1,21 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #343434; }
+
+header {
+  background: url(/img/header_bg.jpg) no-repeat;
+  background-size: contain; }
+
+.logo {
+  float: left; }
+
+.sign_up {
+  float: right;
+  vertical-alignment: middle; }
+
+/*# sourceMappingURL=style.css.map */

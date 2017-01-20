@@ -11,6 +11,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    
+    
+    sass: {
+        dist: {
+            files: {
+                'css/style.css': 'sass/style.scss'
+            }
+        }
+    },
+    
 
     imagemin: {
       build: {
@@ -69,6 +79,13 @@ module.exports = function(grunt) {
           spawn: false
         },
       },
+      styles:{
+        files: ['sass/*.scss'],
+        tasks: ['sass'],
+        options: {
+          spawn: false
+        },
+      },
     },
 
     browserSync: {
@@ -100,6 +117,7 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', [
+    'sass',
     'js',
     'img',
     'browserSync',
@@ -114,5 +132,11 @@ module.exports = function(grunt) {
     'imagemin',
     'svgstore',
   ]);
+
+/*
+  grunt.registerTask('sass', [
+    'sass'
+  ]);
+*/
 
 };

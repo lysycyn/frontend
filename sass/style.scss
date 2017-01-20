@@ -1,0 +1,28 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #343434;
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+header{
+	//min-height: 939px;
+	background: url(/img/header_bg.jpg) no-repeat;
+	background-size: contain;
+}
+
+.logo{
+	float: left;
+}
+
+.sign_up{
+	float: right;
+	vertical-alignment: middle;
+}
