@@ -46,6 +46,17 @@ npm install grunt-contrib-sass --save-dev
 grunt sass
 ```
 
+# STYLUS
+
+Используется grunt-contrib-stylus. 
+npm install grunt-contrib-sass --save-dev
+```
+
+Файлы компилятся автоматом при запуске сборки, если не нужно это, то можно отдельной командой
+```bash
+grunt sass
+```
+
 # WATCH
 
-Автонаблюдение включено для спрайтов, sass и html
+Автонаблюдение включено для спрайтов, sass(stylus) и html

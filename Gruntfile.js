@@ -21,6 +21,29 @@ module.exports = function(grunt) {
         }
     },
     
+    stylus: {
+      compile: {
+        options: {
+          //paths: ['path/to/import', 'another/to/import'],
+          //relativeDest: '../out', //path to be joined and resolved with each file dest to get new one.
+                                  //mostly useful for files specified using wildcards
+          //urlfunc: 'data-uri', // use data-uri('test.png') in our code to trigger Data URI embedding
+          //use: [
+          //  function () {
+          //    return testPlugin('yep'); // plugin with options
+          //  },
+          //  require('fluidity') // use stylus plugin at compile time
+          //],
+          //import: [      //  @import 'foo', 'bar/moo', etc. into every .styl file
+          //  'foo',       //  that is compiled. These might be findable based on values you gave
+          //  'bar/moo'    //  to `paths`, or a plugin you added under `use`
+          //]
+        },
+        files: {
+          'css/style.css': ['stylus/*.styl'] // compile and concat into single file
+        }
+      }
+    },
 
     imagemin: {
       build: {
@@ -79,6 +102,15 @@ module.exports = function(grunt) {
           spawn: false
         },
       },
+      // for stylus
+      styles:{
+        files: ['stylus/*.styl'],
+        tasks: ['stylus'],
+        options: {
+          spawn: false
+        },
+      },
+      /* for sass
       styles:{
         files: ['sass/*.scss'],
         tasks: ['sass'],
@@ -86,6 +118,8 @@ module.exports = function(grunt) {
           spawn: false
         },
       },
+      */
+
     },
 
     browserSync: {
@@ -117,7 +151,8 @@ module.exports = function(grunt) {
 
 
   grunt.registerTask('default', [
-    'sass',
+    'stylus',
+    //'sass',
     'js',
     'img',
     'browserSync',
